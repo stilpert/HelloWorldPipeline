@@ -16,16 +16,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Heroku Action
-      uses: CDNievas/heroku-action@v1.0
+    - name: Deploy to Heroku
+      uses: AkhileshNS/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_email: stilpert@gmail.com
         heroku_app_name: hello-world-spring1
-#     - name: Deploy to Heroku
-#       uses: AkhileshNS/heroku-deploy@v3.12.12
-#       with:
-#         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-#         heroku_email: stilpert@gmail.com
-#         heroku_app_name: hello-world-spring1
+        usedocker: true
+#         docker_build_args:      
+        
   
